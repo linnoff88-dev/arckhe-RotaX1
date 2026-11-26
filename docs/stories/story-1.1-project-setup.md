@@ -343,7 +343,7 @@ Para habilitar PostGIS no Supabase:
 
 ```bash
 # Clone e setup
-git clone git@github.com:inematds/RotaX1.git
+git clone git@github.com:linnoff88-dev/RotaX1.git
 cd RotaX1
 
 # Install dependencies
