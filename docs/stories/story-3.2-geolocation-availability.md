@@ -18,13 +18,13 @@
 ## Acceptance Criteria
 
 - [ ] 1. Endpoint PUT /drivers/availability para toggle online/offline
-- [ ] 2. Endpoint PUT /drivers/location para atualizar posição
-- [ ] 3. Armazenamento de localização em Redis (TTL 60s)
+- [ ] 2. Endpoint PUT /drivers/location para atualizar posiçêo
+- [ ] 3. Armazenamento de localizaçêo em Redis (TTL 60s)
 - [ ] 4. Redis GEO para queries espaciais
-- [ ] 5. Atualização de posição a cada 30 segundos quando online
+- [ ] 5. Atualizaçêo de posiçêo a cada 30 segundos quando online
 - [ ] 6. Heartbeat para detectar drivers offline
 - [ ] 7. Apenas drivers APPROVED podem ficar online
-- [ ] 8. WebSocket para notificar clientes sobre posição
+- [ ] 8. WebSocket para notificar clientes sobre posiçêo
 
 ---
 
@@ -183,7 +183,7 @@ export class AvailabilityService {
     });
 
     if (!driver) {
-      throw new ValidationError('Entregador não encontrado');
+      throw new ValidationError('Entregador nêo encontrado');
     }
 
     if (driver.status !== DriverStatus.APPROVED) {
@@ -219,7 +219,7 @@ export class AvailabilityService {
     const isOnline = await redisService.exists(`${DRIVER_ONLINE_KEY}:${driverId}`);
 
     if (!isOnline) {
-      throw new ForbiddenError('Você precisa estar online para atualizar localização');
+      throw new ForbiddenError('Você precisa estar online para atualizar localizaçêo');
     }
 
     // Update location in Redis GEO
@@ -498,7 +498,7 @@ export class AvailabilityController {
   async getLocation(request: FastifyRequest, reply: FastifyReply): Promise<void> {
     const driverId = await this.getDriverId(request);
     const location = await availabilityService.getDriverLocation(driverId);
-    reply.send(location || { message: 'Localização não disponível' });
+    reply.send(location || { message: 'Localizaçêo nêo disponível' });
   }
 
   private async getDriverId(request: FastifyRequest): Promise<string> {

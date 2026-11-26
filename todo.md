@@ -188,13 +188,13 @@ rotax1/
 - **Nicho inicial:** Medicamentos veterinários (validar antes de congelados)
 - **Cidade piloto:** A definir
 - **Tech stack:** TypeScript, Fastify, Prisma, PostgreSQL/PostGIS, React Native (Expo)
-- **Decisão pendente:** Definir cidade piloto e parcerias iniciais
+- **Decisêo pendente:** Definir cidade piloto e parcerias iniciais
 - **Backend API:** ✅ Completo (Epic 1-4 implementados)
 - **Próximo passo:**
-  - Opção 1: Implementar Epic 5 (Carrier Module - Fase 2)
-  - Opção 2: Configurar Frontend (Mobile ou Web)
-  - Opção 3: Rodar migrations e criar seed de farmácias
-  - Opção 4: Adicionar testes unitários/integração
+  - Opçêo 1: Implementar Epic 5 (Carrier Module - Fase 2)
+  - Opçêo 2: Configurar Frontend (Mobile ou Web)
+  - Opçêo 3: Rodar migrations e criar seed de farmácias
+  - Opçêo 4: Adicionar testes unitários/integraçêo
 
 ## Recent Commits
 

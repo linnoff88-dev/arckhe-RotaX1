@@ -17,11 +17,11 @@
 
 ## Acceptance Criteria
 
-- [ ] 1. Lista de pedidos com filtros (status, data, região)
-- [ ] 2. Visualização em mapa de pedidos ativos
+- [ ] 1. Lista de pedidos com filtros (status, data, regiêo)
+- [ ] 2. Visualizaçêo em mapa de pedidos ativos
 - [ ] 3. Detalhes do pedido com timeline completa
-- [ ] 4. Ação: cancelar pedido com reembolso
-- [ ] 5. Ação: reatribuir pedido para outro driver
+- [ ] 4. Açêo: cancelar pedido com reembolso
+- [ ] 5. Açêo: reatribuir pedido para outro driver
 - [ ] 6. Chat interno com cliente/driver
 - [ ] 7. Histórico de eventos do pedido
 - [ ] 8. Export de relatório de pedidos
@@ -326,7 +326,7 @@ export class AdminOrdersService {
     }
 
     if (order.status === OrderStatus.DELIVERED || order.status === OrderStatus.CANCELLED) {
-      throw new ValidationError('Pedido não pode ser cancelado');
+      throw new ValidationError('Pedido nêo pode ser cancelado');
     }
 
     // Process refund if requested and payment exists
@@ -416,7 +416,7 @@ export class AdminOrdersService {
     }
 
     if (order.status !== OrderStatus.COLLECTING && order.status !== OrderStatus.SEARCHING_DRIVER) {
-      throw new ValidationError('Pedido não pode ser reatribuído neste status');
+      throw new ValidationError('Pedido nêo pode ser reatribuído neste status');
     }
 
     // Verify new driver exists and is available
@@ -430,7 +430,7 @@ export class AdminOrdersService {
     }
 
     if (!newDriver.isOnline) {
-      throw new ValidationError('Entregador não está online');
+      throw new ValidationError('Entregador nêo está online');
     }
 
     // Check if driver has active order
@@ -948,7 +948,7 @@ The map endpoint returns active orders with coordinates for visualization:
       "status": "COLLECTING",
       "pickup": { "lat": -23.5, "lng": -46.6, "address": "Rua X" },
       "delivery": { "lat": -23.6, "lng": -46.7, "address": "Rua Y" },
-      "driver": { "name": "João", "lat": -23.55, "lng": -46.65 }
+      "driver": { "name": "Joêo", "lat": -23.55, "lng": -46.65 }
     }
   ]
 }

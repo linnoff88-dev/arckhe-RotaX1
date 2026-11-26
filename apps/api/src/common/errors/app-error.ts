@@ -13,7 +13,7 @@ export class AppError extends Error {
 
 export class NotFoundError extends AppError {
   constructor(resource: string) {
-    super(`${resource} não encontrado`, 404, 'NOT_FOUND');
+    super(`${resource} nêo encontrado`, 404, 'NOT_FOUND');
   }
 }
 
@@ -24,7 +24,7 @@ export class ValidationError extends AppError {
 }
 
 export class ForbiddenError extends AppError {
-  constructor(message = 'Acesso não autorizado') {
+  constructor(message = 'Acesso nêo autorizado') {
     super(message, 403, 'FORBIDDEN');
   }
 }

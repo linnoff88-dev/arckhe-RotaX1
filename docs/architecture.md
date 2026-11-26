@@ -114,7 +114,7 @@ graph TB
 
 - **Provider:** Railway (MVP) / AWS (Scale)
 - **Key Services:** PostgreSQL, Redis, S3-compatible storage
-- **Deployment Regions:** São Paulo (sa-east-1)
+- **Deployment Regions:** Sêo Paulo (sa-east-1)
 
 ### 3.2 Technology Stack Table
 
@@ -1143,10 +1143,10 @@ Feature Branch → PR → Main Branch
 Olá Architect! Por favor crie a arquitetura de frontend detalhada para o Rotax1
 usando este documento de arquitetura como base. Foque em:
 1. Estrutura de componentes React Native
-2. Navegação e rotas (Expo Router)
+2. Navegaçêo e rotas (Expo Router)
 3. Gerenciamento de estado (Zustand + React Query)
 4. Design system e componentes reutilizáveis
-5. Integração com WebSocket para tracking
+5. Integraçêo com WebSocket para tracking
 ```
 
 ### 16.2 Implementation Order

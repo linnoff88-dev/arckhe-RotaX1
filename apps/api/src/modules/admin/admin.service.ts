@@ -454,7 +454,7 @@ export class AdminService {
     }
 
     if (order.status === OrderStatus.DELIVERED || order.status === OrderStatus.CANCELLED) {
-      throw new ValidationError('Não é possível cancelar este pedido');
+      throw new ValidationError('Nêo é possível cancelar este pedido');
     }
 
     // Update order
@@ -514,7 +514,7 @@ export class AdminService {
     ];
 
     if (!validStatuses.includes(order.status as OrderStatus)) {
-      throw new ValidationError('Não é possível reatribuir este pedido');
+      throw new ValidationError('Nêo é possível reatribuir este pedido');
     }
 
     // Check if new driver exists and is available
@@ -527,7 +527,7 @@ export class AdminService {
     });
 
     if (!newDriver) {
-      throw new NotFoundError('Motorista não encontrado ou não disponível');
+      throw new NotFoundError('Motorista nêo encontrado ou nêo disponível');
     }
 
     const previousDriverId = order.driverId;

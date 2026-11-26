@@ -6,7 +6,7 @@
 
 ## Goal
 
-Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disponíveis, aceitem entregas e completem o fluxo com confirmação.
+Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disponíveis, aceitem entregas e completem o fluxo com confirmaçêo.
 
 ## Dependencies
 
@@ -17,7 +17,7 @@ Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disp
 
 - [ ] Driver pode se cadastrar com documentos
 - [ ] Admin pode aprovar/rejeitar drivers
-- [ ] Driver vê pedidos disponíveis na região
+- [ ] Driver vê pedidos disponíveis na regiêo
 - [ ] Driver pode aceitar e completar entregas
 - [ ] Dashboard de ganhos funcional
 
@@ -37,7 +37,7 @@ Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disp
 **Acceptance Criteria:**
 1. Formulário de cadastro específico para driver
 2. Upload de documentos: CNH, documento do veículo, foto de perfil
-3. Validação de tipo e tamanho de arquivo
+3. Validaçêo de tipo e tamanho de arquivo
 4. Status: PENDING_APPROVAL após cadastro
 5. Armazenamento seguro em S3 com URLs assinadas
 
@@ -64,10 +64,10 @@ Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disp
 
 **Acceptance Criteria:**
 1. Toggle online/offline no app
-2. Captura de geolocalização em background (quando online)
-3. Atualização de posição a cada 30 segundos (quando online)
+2. Captura de geolocalizaçêo em background (quando online)
+3. Atualizaçêo de posiçêo a cada 30 segundos (quando online)
 4. Armazenamento em Redis para queries rápidas
-5. Respeito à bateria (otimização de GPS)
+5. Respeito à bateria (otimizaçêo de GPS)
 
 **Technical Notes:**
 - Endpoint: PUT /drivers/availability { is_online: boolean }
@@ -92,11 +92,11 @@ Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disp
 
 **Acceptance Criteria:**
 1. Lista de pedidos SEARCHING_DRIVER em raio de 5km
-2. Ordenação por proximidade e valor
+2. Ordenaçêo por proximidade e valor
 3. Detalhes do pedido: endereços, distância, valor, categoria
 4. Botões aceitar/recusar com timeout (60s)
 5. Matching: primeiro driver a aceitar ganha
-6. Notificação push para novos pedidos na área
+6. Notificaçêo push para novos pedidos na área
 
 **Technical Notes:**
 - Endpoint: GET /drivers/available-orders
@@ -120,11 +120,11 @@ Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disp
 **so that** I can complete deliveries efficiently.
 
 **Acceptance Criteria:**
-1. Integração com Google Maps para navegação turn-by-turn
-2. Botão "Iniciar Navegação" abre app de mapas externo
-3. Confirmação de coleta com foto obrigatória
-4. Confirmação de entrega com foto + assinatura digital (opcional)
-5. Atualização automática de status em cada etapa
+1. Integraçêo com Google Maps para navegaçêo turn-by-turn
+2. Botêo "Iniciar Navegaçêo" abre app de mapas externo
+3. Confirmaçêo de coleta com foto obrigatória
+4. Confirmaçêo de entrega com foto + assinatura digital (opcional)
+5. Atualizaçêo automática de status em cada etapa
 
 **Technical Notes:**
 - Deep link para Google Maps: `google.navigation:q=${lat},${lng}`
@@ -155,7 +155,7 @@ Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disp
 2. Lista de entregas realizadas com valores
 3. Gráfico de ganhos por dia/semana
 4. Informações de próximo repasse
-5. Exportação de relatório (PDF)
+5. Exportaçêo de relatório (PDF)
 
 **Technical Notes:**
 - Endpoint: GET /drivers/earnings?period=day|week|month
@@ -173,6 +173,6 @@ Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disp
 
 - [ ] Todas as 5 stories completadas
 - [ ] Fluxo driver completo testado
-- [ ] Geolocalização funcionando em background
+- [ ] Geolocalizaçêo funcionando em background
 - [ ] Matching em tempo real validado
 - [ ] Dashboard de ganhos com dados reais

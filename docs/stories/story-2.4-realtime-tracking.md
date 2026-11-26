@@ -19,11 +19,11 @@
 
 - [ ] 1. WebSocket connection para atualizações em tempo real
 - [ ] 2. Endpoint WS /orders/:id/track para rastreamento
-- [ ] 3. Atualização de localização do entregador a cada 5 segundos
+- [ ] 3. Atualizaçêo de localizaçêo do entregador a cada 5 segundos
 - [ ] 4. Cálculo de ETA dinâmico
 - [ ] 5. Notificações push de status (Firebase)
 - [ ] 6. Timeline de eventos do pedido
-- [ ] 7. Mapa com rota e posição atual
+- [ ] 7. Mapa com rota e posiçêo atual
 - [ ] 8. Fallback polling caso WebSocket falhe
 
 ---
@@ -424,7 +424,7 @@ export class PushNotificationService {
     message: string
   ): Promise<void> {
     await this.sendToUser(userId, {
-      title: 'Atualização do Pedido',
+      title: 'Atualizaçêo do Pedido',
       body: message,
       data: {
         type: 'ORDER_STATUS',

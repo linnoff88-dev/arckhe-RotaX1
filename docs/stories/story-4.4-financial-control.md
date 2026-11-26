@@ -21,9 +21,9 @@
 - [ ] 2. Lista de transações com filtros
 - [ ] 3. Processamento de repasses para drivers
 - [ ] 4. Relatórios exportáveis (CSV, PDF)
-- [ ] 5. Configuração de taxas por categoria/região
+- [ ] 5. Configuraçêo de taxas por categoria/regiêo
 - [ ] 6. Histórico de repasses
-- [ ] 7. Projeção de receita
+- [ ] 7. Projeçêo de receita
 - [ ] 8. Alertas de pendências financeiras
 
 ---
@@ -850,7 +850,7 @@ export class ReportsService {
 
     if (type === 'drivers' || type === 'complete') {
       rows.push('=== ENTREGADORES ===');
-      rows.push('Nome,Entregas,Avaliação');
+      rows.push('Nome,Entregas,Avaliaçêo');
       for (const driver of data.drivers) {
         rows.push(`${driver.name},${driver.deliveries},${driver.rating.toFixed(1)}`);
       }

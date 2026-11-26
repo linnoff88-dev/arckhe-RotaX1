@@ -39,7 +39,7 @@ export class AddressesService {
     const coords = await geocodeAddress(fullAddress);
 
     if (!coords) {
-      throw new ValidationError('Não foi possível localizar o endereço');
+      throw new ValidationError('Nêo foi possível localizar o endereço');
     }
 
     // If setting as default, unset other defaults

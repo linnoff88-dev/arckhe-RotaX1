@@ -28,7 +28,7 @@ export class PharmaciesController {
     const limit = request.query.limit ? parseInt(request.query.limit, 10) : 5;
 
     if (isNaN(lat) || isNaN(lng)) {
-      return reply.status(400).send({ error: 'Latitude e longitude são obrigatórios' });
+      return reply.status(400).send({ error: 'Latitude e longitude sêo obrigatórios' });
     }
 
     const pharmacies = await pharmaciesService.getNearby(lat, lng, limit);

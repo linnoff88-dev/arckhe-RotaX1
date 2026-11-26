@@ -6,7 +6,7 @@
 
 ## Goal
 
-Estabelecer a base técnica do projeto incluindo setup do monorepo, autenticação JWT, modelos de dados core e API health check. Ao final deste épico, teremos um sistema deployável com login funcional.
+Estabelecer a base técnica do projeto incluindo setup do monorepo, autenticaçêo JWT, modelos de dados core e API health check. Ao final deste épico, teremos um sistema deployável com login funcional.
 
 ## Dependencies
 
@@ -16,9 +16,9 @@ Estabelecer a base técnica do projeto incluindo setup do monorepo, autenticaç�
 
 - [ ] Monorepo funcional com pnpm workspaces
 - [ ] Banco de dados PostgreSQL + PostGIS configurado
-- [ ] Sistema de autenticação JWT funcionando
+- [ ] Sistema de autenticaçêo JWT funcionando
 - [ ] API com health check deployada em staging
-- [ ] Documentação Swagger disponível
+- [ ] Documentaçêo Swagger disponível
 
 ---
 
@@ -65,7 +65,7 @@ Estabelecer a base técnica do projeto incluindo setup do monorepo, autenticaç�
 2. Prisma schema com models: User, Client, Driver, Order, Vehicle
 3. Migrations iniciais criadas e aplicadas
 4. Seed script com dados de teste
-5. Conexão testada e documentada
+5. Conexêo testada e documentada
 
 **Technical Notes:**
 - PostgreSQL 16 com PostGIS 3.4
@@ -76,7 +76,7 @@ Estabelecer a base técnica do projeto incluindo setup do monorepo, autenticaç�
 
 **Dependencies:** Story 1.1
 
-**Reference:** Ver schema completo em `docs/architecture.md` seção 9
+**Reference:** Ver schema completo em `docs/architecture.md` seçêo 9
 
 ---
 
@@ -93,15 +93,15 @@ Estabelecer a base técnica do projeto incluindo setup do monorepo, autenticaç�
 1. Endpoints: POST /auth/register, POST /auth/login, POST /auth/refresh
 2. JWT access token (15min) + refresh token (7 days)
 3. Senhas hasheadas com bcrypt (cost 12)
-4. Validação de email único
+4. Validaçêo de email único
 5. Roles: CLIENT, DRIVER, ADMIN
-6. Middleware de autenticação funcional
+6. Middleware de autenticaçêo funcional
 7. Testes unitários para auth service
 
 **Technical Notes:**
 - JWT com jsonwebtoken package
 - Refresh tokens armazenados em Redis
-- Zod schemas para validação de input
+- Zod schemas para validaçêo de input
 - Custom error classes (AuthError, ValidationError)
 - Rate limiting: 10 req/min em /auth/*
 
@@ -144,4 +144,4 @@ Estabelecer a base técnica do projeto incluindo setup do monorepo, autenticaç�
 - [ ] Testes passando (>70% coverage)
 - [ ] Code review aprovado
 - [ ] Deploy em staging funcionando
-- [ ] Documentação atualizada
+- [ ] Documentaçêo atualizada

@@ -20,9 +20,9 @@
 - [ ] 1. Endpoint POST /orders para criar pedido
 - [ ] 2. Cálculo automático de distância (Google Maps Distance Matrix)
 - [ ] 3. Cálculo de preço baseado em distância e urgência
-- [ ] 4. Seleção de categoria (VETERINARY, FROZEN, GENERAL)
-- [ ] 5. Seleção de urgência (STANDARD, EXPRESS)
-- [ ] 6. Validação de endereços (geocoding)
+- [ ] 4. Seleçêo de categoria (VETERINARY, FROZEN, GENERAL)
+- [ ] 5. Seleçêo de urgência (STANDARD, EXPRESS)
+- [ ] 6. Validaçêo de endereços (geocoding)
 - [ ] 7. Endpoint GET /orders/:id para detalhes
 - [ ] 8. Endpoint GET /orders para listar pedidos do cliente
 - [ ] 9. Endpoint POST /orders/:id/cancel para cancelar
@@ -255,7 +255,7 @@ export class OrdersService {
       const pickupFull = `${data.pickupAddress.street}, ${data.pickupAddress.number}, ${data.pickupAddress.city}, ${data.pickupAddress.state}`;
       const coords = await geocodeAddress(pickupFull);
       if (!coords) {
-        throw new ValidationError('Não foi possível localizar o endereço de coleta');
+        throw new ValidationError('Nêo foi possível localizar o endereço de coleta');
       }
       pickupCoords = coords;
     }
@@ -264,7 +264,7 @@ export class OrdersService {
       const deliveryFull = `${data.deliveryAddress.street}, ${data.deliveryAddress.number}, ${data.deliveryAddress.city}, ${data.deliveryAddress.state}`;
       const coords = await geocodeAddress(deliveryFull);
       if (!coords) {
-        throw new ValidationError('Não foi possível localizar o endereço de entrega');
+        throw new ValidationError('Nêo foi possível localizar o endereço de entrega');
       }
       deliveryCoords = coords;
     }
@@ -348,7 +348,7 @@ export class OrdersService {
 
     // If clientId provided, verify ownership
     if (clientId && order.clientId !== clientId) {
-      throw new ForbiddenError('Você não tem permissão para ver este pedido');
+      throw new ForbiddenError('Você nêo tem permissêo para ver este pedido');
     }
 
     return order;
@@ -408,7 +408,7 @@ export class OrdersService {
     }
 
     if (order.clientId !== clientId) {
-      throw new ForbiddenError('Você não tem permissão para cancelar este pedido');
+      throw new ForbiddenError('Você nêo tem permissêo para cancelar este pedido');
     }
 
     // Only allow cancellation in certain states
@@ -418,7 +418,7 @@ export class OrdersService {
     ];
 
     if (!cancellableStatuses.includes(order.status)) {
-      throw new ValidationError('Este pedido não pode mais ser cancelado');
+      throw new ValidationError('Este pedido nêo pode mais ser cancelado');
     }
 
     return prisma.order.update({
@@ -444,13 +444,13 @@ export class OrdersService {
     ]);
 
     if (!pickupCoords || !deliveryCoords) {
-      throw new ValidationError('Não foi possível localizar os endereços');
+      throw new ValidationError('Nêo foi possível localizar os endereços');
     }
 
     const distanceResult = await calculateDistance(pickupCoords, deliveryCoords);
     
     if (!distanceResult) {
-      throw new ValidationError('Não foi possível calcular a distância');
+      throw new ValidationError('Nêo foi possível calcular a distância');
     }
 
     const standardPricing = calculatePrice(distanceResult.distanceKm, data.category as OrderCategory, 'STANDARD');

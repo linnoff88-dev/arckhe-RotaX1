@@ -20,11 +20,11 @@
 - [ ] 1. Endpoint POST /auth/register com role DRIVER
 - [ ] 2. Endpoint POST /drivers/documents para upload de documentos
 - [ ] 3. Upload de CNH, documento do veículo, foto de perfil
-- [ ] 4. Validação de tipo (JPG, PNG, PDF) e tamanho (max 5MB)
+- [ ] 4. Validaçêo de tipo (JPG, PNG, PDF) e tamanho (max 5MB)
 - [ ] 5. Status PENDING_APPROVAL após cadastro completo
 - [ ] 6. Armazenamento em R2/S3 com URLs assinadas
 - [ ] 7. Endpoint GET /drivers/me com dados completos
-- [ ] 8. Notificação para admin sobre novo cadastro
+- [ ] 8. Notificaçêo para admin sobre novo cadastro
 
 ---
 
@@ -344,7 +344,7 @@ export class DocumentsService {
   async getUploadUrl(driverId: string, type: DocumentType, mimeType: string) {
     // Validate mime type
     if (!ALLOWED_MIME_TYPES.includes(mimeType)) {
-      throw new ValidationError('Tipo de arquivo não permitido. Use JPG, PNG ou PDF');
+      throw new ValidationError('Tipo de arquivo nêo permitido. Use JPG, PNG ou PDF');
     }
 
     const extension = this.getExtension(mimeType);
@@ -364,7 +364,7 @@ export class DocumentsService {
     // Verify file exists in storage
     const exists = await storageService.fileExists(key);
     if (!exists) {
-      throw new ValidationError('Arquivo não encontrado. Faça o upload novamente');
+      throw new ValidationError('Arquivo nêo encontrado. Faça o upload novamente');
     }
 
     // Check if document already exists

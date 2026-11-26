@@ -22,9 +22,9 @@
 - [ ] 3. Endpoint POST /auth/refresh funcional
 - [ ] 4. JWT access token (15min) + refresh token (7 days)
 - [ ] 5. Senhas hasheadas com bcrypt (cost 12)
-- [ ] 6. Validação de email único
+- [ ] 6. Validaçêo de email único
 - [ ] 7. Roles: CLIENT, DRIVER, ADMIN
-- [ ] 8. Middleware de autenticação funcional
+- [ ] 8. Middleware de autenticaçêo funcional
 - [ ] 9. Testes unitários para auth service (>70% coverage)
 
 ---
@@ -107,7 +107,7 @@ export class InvalidTokenError extends AuthError {
 
 export class UserNotActiveError extends AuthError {
   constructor() {
-    super('Usuário não está ativo. Aguarde aprovação.', 403);
+    super('Usuário nêo está ativo. Aguarde aprovaçêo.', 403);
     this.code = 'USER_NOT_ACTIVE';
   }
 }
@@ -413,7 +413,7 @@ export function requireRole(...roles: UserRole[]) {
     await authenticate(request, reply);
 
     if (!request.user || !roles.includes(request.user.role)) {
-      reply.status(403).send({ error: 'Acesso não autorizado' });
+      reply.status(403).send({ error: 'Acesso nêo autorizado' });
     }
   };
 }

@@ -48,4 +48,4 @@
 
 - **Hosting:** Railway (MVP)
 - **CI/CD:** GitHub Actions
-- **Region:** São Paulo (sa-east-1)
+- **Region:** Sêo Paulo (sa-east-1)

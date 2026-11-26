@@ -21,10 +21,10 @@
 - [ ] 2. CRUD de motoristas vinculados
 - [ ] 3. Disponibilidade por veículo/motorista
 - [ ] 4. Calendário de disponibilidade
-- [ ] 5. Atribuição de motorista a veículo
+- [ ] 5. Atribuiçêo de motorista a veículo
 - [ ] 6. Dashboard de frota
 - [ ] 7. Histórico de entregas por veículo/motorista
-- [ ] 8. Alertas de manutenção/documentos vencendo
+- [ ] 8. Alertas de manutençêo/documentos vencendo
 
 ---
 

@@ -18,13 +18,13 @@
 ## Acceptance Criteria
 
 - [ ] 1. Endpoint GET /drivers/available-orders lista pedidos em raio de 5km
-- [ ] 2. Ordenação por proximidade e valor
+- [ ] 2. Ordenaçêo por proximidade e valor
 - [ ] 3. Detalhes do pedido: endereços, distância, valor, categoria
 - [ ] 4. Endpoint POST /orders/:id/accept para aceitar pedido
 - [ ] 5. Endpoint POST /orders/:id/reject para recusar pedido
 - [ ] 6. Race condition prevention com Redis lock
 - [ ] 7. Timeout de 60 segundos para aceite
-- [ ] 8. Notificação push para novos pedidos na área
+- [ ] 8. Notificaçêo push para novos pedidos na área
 
 ---
 
@@ -100,7 +100,7 @@ export class DriverOrdersService {
     // Get driver location
     const location = await availabilityService.getDriverLocation(driverId);
     if (!location) {
-      throw new ValidationError('Localização não disponível. Atualize sua posição');
+      throw new ValidationError('Localizaçêo nêo disponível. Atualize sua posiçêo');
     }
 
     // Query orders within 5km radius using PostGIS
@@ -218,7 +218,7 @@ export class DriverOrdersService {
       }
 
       if (order.status !== OrderStatus.SEARCHING_DRIVER) {
-        throw new ConflictError('Este pedido não está mais disponível');
+        throw new ConflictError('Este pedido nêo está mais disponível');
       }
 
       // Update order with driver

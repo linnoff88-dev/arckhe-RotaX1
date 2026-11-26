@@ -18,13 +18,13 @@
 ## Acceptance Criteria
 
 - [ ] 1. Cadastro de empresa com CNPJ
-- [ ] 2. Upload de documentação (contrato social, alvará)
-- [ ] 3. Definição de áreas de atuação
-- [ ] 4. Aprovação por admin
+- [ ] 2. Upload de documentaçêo (contrato social, alvará)
+- [ ] 3. Definiçêo de áreas de atuaçêo
+- [ ] 4. Aprovaçêo por admin
 - [ ] 5. Dashboard da transportadora
-- [ ] 6. Configuração de capacidades e veículos
+- [ ] 6. Configuraçêo de capacidades e veículos
 - [ ] 7. Termos de serviço e contrato digital
-- [ ] 8. Notificações de aprovação
+- [ ] 8. Notificações de aprovaçêo
 
 ---
 
@@ -145,7 +145,7 @@ enum CarrierStatus {
 enum CarrierDocumentType {
   SOCIAL_CONTRACT      // Contrato Social
   OPERATING_LICENSE    // Alvará de funcionamento
-  CNPJ_CARD            // Cartão CNPJ
+  CNPJ_CARD            // Cartêo CNPJ
   ANTT_LICENSE         // Licença ANTT (if applicable)
   INSURANCE            // Seguro de carga
   ADDRESS_PROOF        // Comprovante de endereço
@@ -173,7 +173,7 @@ export const carrierRegisterSchema = z.object({
   password: z.string().min(8, 'Senha deve ter no mínimo 8 caracteres'),
 
   // Company info
-  companyName: z.string().min(3, 'Razão social é obrigatória'),
+  companyName: z.string().min(3, 'Razêo social é obrigatória'),
   tradeName: z.string().optional(),
   cnpj: z.string().regex(cnpjRegex, 'CNPJ inválido (apenas números)'),
   stateRegistration: z.string().optional(),
@@ -455,7 +455,7 @@ export class CarriersService {
     });
 
     if (!region) {
-      throw new NotFoundError('Região');
+      throw new NotFoundError('Regiêo');
     }
 
     return prisma.carrierRegion.delete({ where: { id: regionId } });
@@ -649,7 +649,7 @@ export async function carriersRoutes(fastify: FastifyInstance): Promise<void> {
 |----------|-------------|----------|
 | SOCIAL_CONTRACT | Contrato Social | Yes |
 | OPERATING_LICENSE | Alvará de Funcionamento | Yes |
-| CNPJ_CARD | Cartão CNPJ | Yes |
+| CNPJ_CARD | Cartêo CNPJ | Yes |
 | ANTT_LICENSE | Licença ANTT | If applicable |
 | INSURANCE | Seguro de Carga | Yes |
 | ADDRESS_PROOF | Comprovante de Endereço | Yes |

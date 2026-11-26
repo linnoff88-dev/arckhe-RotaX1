@@ -17,14 +17,14 @@
 
 ## Acceptance Criteria
 
-- [ ] 1. Login separado para admins com validação de role
+- [ ] 1. Login separado para admins com validaçêo de role
 - [ ] 2. 2FA opcional com TOTP (Google Authenticator)
 - [ ] 3. Dashboard com métricas em tempo real
 - [ ] 4. Gráficos de tendência (7/30 dias)
 - [ ] 5. Alertas de problemas (pedidos stuck, reclamações)
 - [ ] 6. WebSocket para atualizações em tempo real
 - [ ] 7. Responsivo para tablet/desktop
-- [ ] 8. Sessão segura com timeout
+- [ ] 8. Sessêo segura com timeout
 
 ---
 
@@ -155,7 +155,7 @@ export class AdminAuthService {
     });
 
     if (!admin) {
-      throw new ValidationError('Admin não encontrado');
+      throw new ValidationError('Admin nêo encontrado');
     }
 
     if (admin.totpEnabled) {
@@ -233,7 +233,7 @@ export class AdminAuthService {
     });
 
     if (!admin) {
-      throw new ValidationError('Admin não encontrado');
+      throw new ValidationError('Admin nêo encontrado');
     }
 
     const isValidPassword = await comparePassword(password, admin.user.passwordHash);
@@ -491,7 +491,7 @@ export class DashboardService {
       alerts.push({
         id: `rating-${rating.id}`,
         type: 'warning',
-        title: 'Avaliação negativa',
+        title: 'Avaliaçêo negativa',
         message: `Entrega #${rating.orderId.substring(0, 8)} recebeu ${rating.stars} estrelas`,
         orderId: rating.orderId,
         createdAt: rating.createdAt,

@@ -24,7 +24,7 @@
 - [ ] 5. Gráfico de ganhos por dia/semana
 - [ ] 6. Informações de próximo repasse
 - [ ] 7. Endpoint GET /drivers/earnings/export para PDF
-- [ ] 8. Estatísticas: total entregas, rating, taxa de aceitação
+- [ ] 8. Estatísticas: total entregas, rating, taxa de aceitaçêo
 
 ---
 

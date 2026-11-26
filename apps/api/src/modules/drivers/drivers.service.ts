@@ -130,7 +130,7 @@ export class DriversService {
 
     // Only approved drivers can go online
     if (isOnline && driver.user.status !== UserStatus.ACTIVE) {
-      throw new ForbiddenError('Seu cadastro ainda não foi aprovado');
+      throw new ForbiddenError('Seu cadastro ainda nêo foi aprovado');
     }
 
     return prisma.driver.update({
@@ -269,7 +269,7 @@ export class DriversService {
     });
 
     if (!order) {
-      throw new ValidationError('Pedido não disponível ou já aceito por outro motorista');
+      throw new ValidationError('Pedido nêo disponível ou já aceito por outro motorista');
     }
 
     // Accept the order
@@ -396,7 +396,7 @@ export class DriversService {
     };
 
     if (!validTransitions[order.status]?.includes(data.status)) {
-      throw new ValidationError(`Transição de status inválida: ${order.status} -> ${data.status}`);
+      throw new ValidationError(`Transiçêo de status inválida: ${order.status} -> ${data.status}`);
     }
 
     const updateData: any = {

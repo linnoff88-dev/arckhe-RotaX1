@@ -51,7 +51,7 @@ export class OrdersService {
     );
 
     if (!distanceResult) {
-      throw new ValidationError('Não foi possível calcular a distância');
+      throw new ValidationError('Nêo foi possível calcular a distância');
     }
 
     // Calculate price
@@ -77,7 +77,7 @@ export class OrdersService {
 
     // Check express availability
     if (input.urgency === 'EXPRESS' && !pharmacy.acceptsExpress) {
-      throw new ValidationError('Esta farmácia não aceita entregas express');
+      throw new ValidationError('Esta farmácia nêo aceita entregas express');
     }
 
     // Get delivery address
@@ -360,7 +360,7 @@ export class OrdersService {
 
     if (!cancellableStates.includes(order.status as OrderStatus)) {
       throw new ValidationError(
-        'Não é possível cancelar este pedido. O pedido já está em andamento.'
+        'Nêo é possível cancelar este pedido. O pedido já está em andamento.'
       );
     }
 
@@ -413,7 +413,7 @@ export class OrdersService {
     }
 
     if (!order.driverId || !order.driver) {
-      throw new ValidationError('Pedido sem motorista não pode ser avaliado');
+      throw new ValidationError('Pedido sem motorista nêo pode ser avaliado');
     }
 
     // Create rating

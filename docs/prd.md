@@ -15,15 +15,15 @@
 - Conectar clientes, entregadores autônomos e transportadoras em um ecossistema logístico
 - Facilitar entregas locais e regionais com rastreamento em tempo real
 - Gerar renda para entregadores autônomos (MEI)
-- Oferecer solução logística acessível para PMEs e pequenos negócios
+- Oferecer soluçêo logística acessível para PMEs e pequenos negócios
 - Iniciar com nichos específicos: medicamentos veterinários e alimentos congelados
 - Validar modelo de negócio em cidade piloto antes de escalar
 
 ### 1.2 Background Context
 
-O mercado de logística de última milha no Brasil cresce aproximadamente 23% ao ano, com investimentos previstos de R$ 124,3 bilhões até 2026. Apesar disso, 63% dos consumidores abandonam carrinhos quando a entrega ultrapassa 3 dias, revelando uma demanda não atendida por entregas rápidas e confiáveis.
+O mercado de logística de última milha no Brasil cresce aproximadamente 23% ao ano, com investimentos previstos de R$ 124,3 bilhões até 2026. Apesar disso, 63% dos consumidores abandonam carrinhos quando a entrega ultrapassa 3 dias, revelando uma demanda nêo atendida por entregas rápidas e confiáveis.
 
-Os players dominantes (Loggi, Rappi, iFood) focam em grandes volumes e mercados genéricos, deixando nichos específicos como medicamentos veterinários e alimentos congelados subatendidos. Com 167,6 milhões de pets no Brasil e 285.000+ empresas no setor pet (49% PMEs), existe uma oportunidade clara para uma plataforma especializada que ofereça SLA garantido e integração com sistemas de clínicas e pet shops.
+Os players dominantes (Loggi, Rappi, iFood) focam em grandes volumes e mercados genéricos, deixando nichos específicos como medicamentos veterinários e alimentos congelados subatendidos. Com 167,6 milhões de pets no Brasil e 285.000+ empresas no setor pet (49% PMEs), existe uma oportunidade clara para uma plataforma especializada que ofereça SLA garantido e integraçêo com sistemas de clínicas e pet shops.
 
 O Rotax1 posiciona-se como um marketplace logístico regional, começando com foco em nichos de alta recorrência e baixa concorrência direta, para depois expandir geograficamente e em categorias.
 
@@ -40,10 +40,10 @@ O Rotax1 posiciona-se como um marketplace logístico regional, começando com fo
 ### 2.1 Functional Requirements
 
 **Módulo Cliente:**
-- FR1: O sistema deve permitir cadastro e login de clientes (pessoa física e jurídica) com validação de email/telefone
-- FR2: O sistema deve permitir criação de pedidos com endereço de coleta, entrega, descrição do item e urgência
+- FR1: O sistema deve permitir cadastro e login de clientes (pessoa física e jurídica) com validaçêo de email/telefone
+- FR2: O sistema deve permitir criaçêo de pedidos com endereço de coleta, entrega, descriçêo do item e urgência
 - FR3: O sistema deve calcular automaticamente valor e prazo estimado baseado em distância e tipo de entrega
-- FR4: O sistema deve oferecer pagamento via Pix e cartão de crédito/débito
+- FR4: O sistema deve oferecer pagamento via Pix e cartêo de crédito/débito
 - FR5: O sistema deve exibir rastreamento em tempo real da entrega com mapa
 - FR6: O sistema deve permitir que clientes avaliem entregadores após a entrega (1-5 estrelas + comentário)
 - FR7: O sistema deve manter histórico completo de pedidos do cliente
@@ -51,29 +51,29 @@ O Rotax1 posiciona-se como um marketplace logístico regional, começando com fo
 
 **Módulo Entregador:**
 - FR9: O sistema deve permitir cadastro de entregadores com upload de documentos (CNH, documento do veículo, foto)
-- FR10: O sistema deve exigir aprovação manual de entregadores pelo admin antes de ativação
-- FR11: O sistema deve capturar geolocalização do entregador quando disponível para entregas
-- FR12: O sistema deve exibir pedidos disponíveis na região do entregador
+- FR10: O sistema deve exigir aprovaçêo manual de entregadores pelo admin antes de ativaçêo
+- FR11: O sistema deve capturar geolocalizaçêo do entregador quando disponível para entregas
+- FR12: O sistema deve exibir pedidos disponíveis na regiêo do entregador
 - FR13: O sistema deve permitir que entregador aceite ou recuse pedidos
-- FR14: O sistema deve exibir rota otimizada para coleta e entrega (integração Google Maps)
+- FR14: O sistema deve exibir rota otimizada para coleta e entrega (integraçêo Google Maps)
 - FR15: O sistema deve permitir que entregador confirme coleta e entrega com foto/assinatura
 - FR16: O sistema deve exibir dashboard de ganhos (diário, semanal, mensal)
 - FR17: O sistema deve processar repasse financeiro para entregadores (semanal)
 
 **Módulo Transportadora:**
-- FR18: O sistema deve permitir cadastro de transportadoras com CNPJ e documentação
-- FR19: O sistema deve permitir gestão de frota (cadastro de veículos e motoristas)
+- FR18: O sistema deve permitir cadastro de transportadoras com CNPJ e documentaçêo
+- FR19: O sistema deve permitir gestêo de frota (cadastro de veículos e motoristas)
 - FR20: O sistema deve direcionar pedidos de maior volume para transportadoras
-- FR21: O sistema deve permitir que transportadoras definam áreas de atuação e capacidade
+- FR21: O sistema deve permitir que transportadoras definam áreas de atuaçêo e capacidade
 
 **Módulo Admin:**
-- FR22: O sistema deve permitir aprovação/rejeição de cadastros de entregadores e transportadoras
+- FR22: O sistema deve permitir aprovaçêo/rejeiçêo de cadastros de entregadores e transportadoras
 - FR23: O sistema deve exibir dashboard de pedidos em tempo real (pendentes, em andamento, concluídos)
-- FR24: O sistema deve permitir gestão de pedidos (cancelamento, reembolso, reassignment)
+- FR24: O sistema deve permitir gestêo de pedidos (cancelamento, reembolso, reassignment)
 - FR25: O sistema deve exibir controle financeiro (receitas, comissões, repasses)
 - FR26: O sistema deve gerar relatórios e métricas (entregas/dia, tempo médio, avaliações)
-- FR27: O sistema deve permitir configuração de taxas e comissões por região/categoria
-- FR28: O sistema deve permitir gestão de usuários (clientes, entregadores, admins)
+- FR27: O sistema deve permitir configuraçêo de taxas e comissões por regiêo/categoria
+- FR28: O sistema deve permitir gestêo de usuários (clientes, entregadores, admins)
 
 **Geral:**
 - FR29: O sistema deve suportar múltiplas categorias de entrega (veterinário, congelados, geral)
@@ -85,13 +85,13 @@ O Rotax1 posiciona-se como um marketplace logístico regional, começando com fo
 - NFR2: O sistema deve responder a requisições em menos de 500ms (P95)
 - NFR3: O sistema deve suportar 1.000 usuários simultâneos no MVP
 - NFR4: O sistema deve escalar horizontalmente para suportar crescimento
-- NFR5: O sistema deve estar em conformidade com LGPD (consentimento, anonimização, direito ao esquecimento)
+- NFR5: O sistema deve estar em conformidade com LGPD (consentimento, anonimizaçêo, direito ao esquecimento)
 - NFR6: O sistema deve usar HTTPS em todas as comunicações
 - NFR7: O sistema deve armazenar senhas com hash bcrypt (custo mínimo 12)
 - NFR8: O sistema deve implementar rate limiting para prevenir abuso
 - NFR9: O sistema deve ter backup diário do banco de dados
 - NFR10: O sistema deve funcionar em dispositivos móveis (iOS e Android) e web
-- NFR11: A localização dos entregadores deve atualizar a cada 10 segundos durante entrega ativa
+- NFR11: A localizaçêo dos entregadores deve atualizar a cada 10 segundos durante entrega ativa
 - NFR12: O sistema deve processar pagamentos via gateway confiável (Mercado Pago ou similar)
 
 ---
@@ -100,47 +100,47 @@ O Rotax1 posiciona-se como um marketplace logístico regional, começando com fo
 
 ### 3.1 Overall UX Vision
 
-Interface limpa, intuitiva e focada em eficiência. O cliente deve conseguir criar um pedido em menos de 60 segundos. O entregador deve visualizar e aceitar entregas com um único toque. Priorizar velocidade de interação sobre estética elaborada.
+Interface limpa, intuitiva e focada em eficiência. O cliente deve conseguir criar um pedido em menos de 60 segundos. O entregador deve visualizar e aceitar entregas com um único toque. Priorizar velocidade de interaçêo sobre estética elaborada.
 
 ### 3.2 Key Interaction Paradigms
 
-- **Cliente:** Fluxo wizard para criação de pedido (passo a passo guiado)
+- **Cliente:** Fluxo wizard para criaçêo de pedido (passo a passo guiado)
 - **Entregador:** Lista de cards com pedidos disponíveis, swipe para aceitar/recusar
-- **Admin:** Dashboard com métricas em cards e tabelas para gestão
-- **Mapa:** Componente central para visualização de entregas e rastreamento
+- **Admin:** Dashboard com métricas em cards e tabelas para gestêo
+- **Mapa:** Componente central para visualizaçêo de entregas e rastreamento
 
 ### 3.3 Core Screens and Views
 
 **App Cliente:**
 1. Login/Cadastro
 2. Home (novo pedido + histórico recente)
-3. Criação de Pedido (wizard 4 etapas)
+3. Criaçêo de Pedido (wizard 4 etapas)
 4. Rastreamento em Tempo Real (mapa)
 5. Histórico de Pedidos
-6. Avaliação do Entregador
+6. Avaliaçêo do Entregador
 7. Perfil e Configurações
 
 **App Entregador:**
 1. Login/Cadastro com Upload de Docs
 2. Home (toggle online/offline + pedidos disponíveis)
 3. Detalhes do Pedido (aceitar/recusar)
-4. Navegação (mapa com rota)
-5. Confirmação de Coleta/Entrega (foto)
+4. Navegaçêo (mapa com rota)
+5. Confirmaçêo de Coleta/Entrega (foto)
 6. Dashboard de Ganhos
 7. Perfil e Documentos
 
 **Admin Panel:**
 1. Dashboard Principal (métricas)
-2. Gestão de Pedidos
-3. Gestão de Entregadores (aprovação)
-4. Gestão de Transportadoras
+2. Gestêo de Pedidos
+3. Gestêo de Entregadores (aprovaçêo)
+4. Gestêo de Transportadoras
 5. Controle Financeiro
 6. Relatórios
 7. Configurações
 
 ### 3.4 Accessibility
 
-WCAG AA - Contraste adequado, labels em formulários, navegação por teclado no admin panel.
+WCAG AA - Contraste adequado, labels em formulários, navegaçêo por teclado no admin panel.
 
 ### 3.5 Branding
 
@@ -181,7 +181,7 @@ rotax1/
 **Monolith Modular** para o MVP:
 - API única com módulos bem separados (clients, drivers, orders, payments, admin)
 - Fácil de desenvolver e deployar
-- Migração para microserviços quando necessário (pós-validação)
+- Migraçêo para microserviços quando necessário (pós-validaçêo)
 
 ### 4.3 Testing Requirements
 
@@ -199,8 +199,8 @@ rotax1/
 - **Cache:** Redis para sessões e dados frequentes
 - **Fila:** BullMQ para processamento assíncrono (notificações, repasses)
 - **Storage:** AWS S3 ou Cloudflare R2 para fotos e documentos
-- **Maps:** Google Maps API (geolocalização, rotas, geocoding)
-- **Pagamentos:** Mercado Pago API (Pix, cartão)
+- **Maps:** Google Maps API (geolocalizaçêo, rotas, geocoding)
+- **Pagamentos:** Mercado Pago API (Pix, cartêo)
 - **Push Notifications:** Firebase Cloud Messaging (FCM)
 - **Hosting:** Railway ou Render para MVP (fácil, baixo custo)
 - **Mobile:** React Native com Expo para desenvolvimento rápido
@@ -213,16 +213,16 @@ rotax1/
 ## 5. Epic List
 
 ### Epic 1: Foundation & Core Infrastructure
-**Goal:** Estabelecer projeto, autenticação e estrutura base da API com health check funcional.
+**Goal:** Estabelecer projeto, autenticaçêo e estrutura base da API com health check funcional.
 
 ### Epic 2: Client Module - Order Flow
 **Goal:** Permitir que clientes criem pedidos, paguem e acompanhem entregas em tempo real.
 
 ### Epic 3: Driver Module - Delivery Flow
-**Goal:** Permitir que entregadores se cadastrem, aceitem pedidos e realizem entregas com navegação.
+**Goal:** Permitir que entregadores se cadastrem, aceitem pedidos e realizem entregas com navegaçêo.
 
 ### Epic 4: Admin Module - Operations
-**Goal:** Fornecer painel administrativo para gestão de usuários, pedidos e financeiro.
+**Goal:** Fornecer painel administrativo para gestêo de usuários, pedidos e financeiro.
 
 ### Epic 5: Carrier Module (Phase 2)
 **Goal:** Integrar transportadoras para pedidos de maior volume.
@@ -233,7 +233,7 @@ rotax1/
 
 ### Epic 1: Foundation & Core Infrastructure
 
-**Goal:** Estabelecer a base técnica do projeto incluindo setup do monorepo, autenticação JWT, modelos de dados core e API health check. Ao final deste épico, teremos um sistema deployável com login funcional.
+**Goal:** Estabelecer a base técnica do projeto incluindo setup do monorepo, autenticaçêo JWT, modelos de dados core e API health check. Ao final deste épico, teremos um sistema deployável com login funcional.
 
 #### Story 1.1: Project Setup & Monorepo Structure
 **As a** developer,
@@ -258,7 +258,7 @@ rotax1/
 2. Prisma schema com models: User, Client, Driver, Order, Vehicle
 3. Migrations iniciais criadas e aplicadas
 4. Seed script com dados de teste
-5. Conexão testada e documentada
+5. Conexêo testada e documentada
 
 #### Story 1.3: Authentication System
 **As a** user (client or driver),
@@ -269,9 +269,9 @@ rotax1/
 1. Endpoints: POST /auth/register, POST /auth/login, POST /auth/refresh
 2. JWT access token (15min) + refresh token (7 days)
 3. Senhas hasheadas com bcrypt (cost 12)
-4. Validação de email único
+4. Validaçêo de email único
 5. Roles: CLIENT, DRIVER, ADMIN
-6. Middleware de autenticação funcional
+6. Middleware de autenticaçêo funcional
 7. Testes unitários para auth service
 
 #### Story 1.4: API Base Structure & Health Check
@@ -292,7 +292,7 @@ rotax1/
 
 ### Epic 2: Client Module - Order Flow
 
-**Goal:** Implementar o fluxo completo do cliente desde criação de pedido até rastreamento, incluindo cálculo de preço, pagamento e notificações.
+**Goal:** Implementar o fluxo completo do cliente desde criaçêo de pedido até rastreamento, incluindo cálculo de preço, pagamento e notificações.
 
 #### Story 2.1: Client Profile Management
 **As a** client,
@@ -301,10 +301,10 @@ rotax1/
 
 **Acceptance Criteria:**
 1. Endpoints CRUD para perfil do cliente
-2. Gestão de endereços salvos (múltiplos)
-3. Validação de CEP e geocoding
+2. Gestêo de endereços salvos (múltiplos)
+3. Validaçêo de CEP e geocoding
 4. Upload de foto de perfil (S3)
-5. Testes de integração
+5. Testes de integraçêo
 
 #### Story 2.2: Order Creation Flow
 **As a** client,
@@ -312,7 +312,7 @@ rotax1/
 **so that** I can request a delivery service.
 
 **Acceptance Criteria:**
-1. Endpoint POST /orders com validação completa
+1. Endpoint POST /orders com validaçêo completa
 2. Campos: pickup_address, delivery_address, description, category, urgency
 3. Cálculo automático de distância (Google Maps Distance Matrix)
 4. Cálculo de preço baseado em distância + categoria + urgência
@@ -325,10 +325,10 @@ rotax1/
 **so that** the delivery can be dispatched.
 
 **Acceptance Criteria:**
-1. Integração com Mercado Pago API
-2. Geração de QR Code Pix
-3. Webhook para confirmação de pagamento
-4. Atualização de status: PENDING_PAYMENT → SEARCHING_DRIVER
+1. Integraçêo com Mercado Pago API
+2. Geraçêo de QR Code Pix
+3. Webhook para confirmaçêo de pagamento
+4. Atualizaçêo de status: PENDING_PAYMENT → SEARCHING_DRIVER
 5. Timeout de pagamento (30 min)
 6. Testes com sandbox do Mercado Pago
 
@@ -338,9 +338,9 @@ rotax1/
 **so that** I know exactly where my order is.
 
 **Acceptance Criteria:**
-1. WebSocket connection para updates de localização
+1. WebSocket connection para updates de localizaçêo
 2. Endpoint GET /orders/:id/tracking
-3. Atualização de posição a cada 10 segundos
+3. Atualizaçêo de posiçêo a cada 10 segundos
 4. Estados visuais: searching, driver_assigned, collecting, delivering, delivered
 5. ETA dinâmico baseado em tráfego
 
@@ -350,17 +350,17 @@ rotax1/
 **so that** I can track my deliveries and provide feedback.
 
 **Acceptance Criteria:**
-1. Endpoint GET /orders com paginação e filtros
+1. Endpoint GET /orders com paginaçêo e filtros
 2. Detalhes do pedido com timeline de status
 3. Endpoint POST /orders/:id/rating (1-5 estrelas + comentário)
-4. Média de avaliação atualizada no perfil do driver
-5. Notificação push ao driver sobre nova avaliação
+4. Média de avaliaçêo atualizada no perfil do driver
+5. Notificaçêo push ao driver sobre nova avaliaçêo
 
 ---
 
 ### Epic 3: Driver Module - Delivery Flow
 
-**Goal:** Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disponíveis, aceitem entregas e completem o fluxo com confirmação.
+**Goal:** Permitir que entregadores se cadastrem, sejam aprovados, visualizem pedidos disponíveis, aceitem entregas e completem o fluxo com confirmaçêo.
 
 #### Story 3.1: Driver Registration & Document Upload
 **As a** driver,
@@ -370,7 +370,7 @@ rotax1/
 **Acceptance Criteria:**
 1. Formulário de cadastro específico para driver
 2. Upload de documentos: CNH, documento do veículo, foto de perfil
-3. Validação de tipo e tamanho de arquivo
+3. Validaçêo de tipo e tamanho de arquivo
 4. Status: PENDING_APPROVAL após cadastro
 5. Armazenamento seguro em S3 com URLs assinadas
 
@@ -381,10 +381,10 @@ rotax1/
 
 **Acceptance Criteria:**
 1. Toggle online/offline no app
-2. Captura de geolocalização em background (quando online)
-3. Atualização de posição a cada 30 segundos (quando online)
+2. Captura de geolocalizaçêo em background (quando online)
+3. Atualizaçêo de posiçêo a cada 30 segundos (quando online)
 4. Armazenamento em Redis para queries rápidas
-5. Respeito à bateria (otimização de GPS)
+5. Respeito à bateria (otimizaçêo de GPS)
 
 #### Story 3.3: Order Matching & Acceptance
 **As a** driver,
@@ -393,11 +393,11 @@ rotax1/
 
 **Acceptance Criteria:**
 1. Lista de pedidos SEARCHING_DRIVER em raio de 5km
-2. Ordenação por proximidade e valor
+2. Ordenaçêo por proximidade e valor
 3. Detalhes do pedido: endereços, distância, valor, categoria
 4. Botões aceitar/recusar com timeout (60s)
 5. Matching: primeiro driver a aceitar ganha
-6. Notificação push para novos pedidos na área
+6. Notificaçêo push para novos pedidos na área
 
 #### Story 3.4: Delivery Navigation & Confirmation
 **As a** driver,
@@ -405,11 +405,11 @@ rotax1/
 **so that** I can complete deliveries efficiently.
 
 **Acceptance Criteria:**
-1. Integração com Google Maps para navegação turn-by-turn
-2. Botão "Iniciar Navegação" abre app de mapas externo
-3. Confirmação de coleta com foto obrigatória
-4. Confirmação de entrega com foto + assinatura digital (opcional)
-5. Atualização automática de status em cada etapa
+1. Integraçêo com Google Maps para navegaçêo turn-by-turn
+2. Botêo "Iniciar Navegaçêo" abre app de mapas externo
+3. Confirmaçêo de coleta com foto obrigatória
+4. Confirmaçêo de entrega com foto + assinatura digital (opcional)
+5. Atualizaçêo automática de status em cada etapa
 
 #### Story 3.5: Driver Earnings Dashboard
 **As a** driver,
@@ -421,7 +421,7 @@ rotax1/
 2. Lista de entregas realizadas com valores
 3. Gráfico de ganhos por dia/semana
 4. Informações de próximo repasse
-5. Exportação de relatório (PDF)
+5. Exportaçêo de relatório (PDF)
 
 ---
 
@@ -458,11 +458,11 @@ rotax1/
 **so that** I can resolve issues and ensure quality.
 
 **Acceptance Criteria:**
-1. Lista de pedidos com filtros (status, data, região)
-2. Visualização em mapa de pedidos ativos
+1. Lista de pedidos com filtros (status, data, regiêo)
+2. Visualizaçêo em mapa de pedidos ativos
 3. Detalhes do pedido com timeline completa
 4. Ações: cancelar, reembolsar, reatribuir driver
-5. Comunicação com cliente/driver (chat interno)
+5. Comunicaçêo com cliente/driver (chat interno)
 
 #### Story 4.4: Financial Control & Reports
 **As an** admin,
@@ -474,7 +474,7 @@ rotax1/
 2. Lista de transações com filtros
 3. Processamento de repasses para drivers
 4. Relatórios exportáveis (CSV, PDF)
-5. Configuração de taxas e comissões por categoria/região
+5. Configuraçêo de taxas e comissões por categoria/regiêo
 
 ---
 
@@ -489,9 +489,9 @@ rotax1/
 
 **Acceptance Criteria:**
 1. Cadastro de empresa com CNPJ
-2. Upload de documentação (contrato social, alvará)
-3. Definição de áreas de atuação
-4. Aprovação por admin
+2. Upload de documentaçêo (contrato social, alvará)
+3. Definiçêo de áreas de atuaçêo
+4. Aprovaçêo por admin
 
 #### Story 5.2: Fleet Management
 **As a** carrier,
@@ -511,7 +511,7 @@ rotax1/
 **Acceptance Criteria:**
 1. Recebimento de pedidos acima de X kg ou volume
 2. Aceite/recusa com proposta de preço
-3. Atribuição interna para motorista/veículo
+3. Atribuiçêo interna para motorista/veículo
 4. Tracking unificado na plataforma
 
 ---
@@ -542,7 +542,7 @@ Olá Architect! Preciso que você crie a arquitetura técnica do Rotax1 baseado
 neste PRD. Use as Technical Assumptions como ponto de partida e detalhe:
 1. Diagrama de arquitetura do sistema
 2. Schema completo do banco de dados
-3. Especificação de APIs (endpoints, payloads)
+3. Especificaçêo de APIs (endpoints, payloads)
 4. Tech stack final com justificativas
 5. Plano de deployment e infraestrutura
 ```

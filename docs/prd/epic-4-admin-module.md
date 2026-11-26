@@ -17,8 +17,8 @@ Fornecer painel web para administradores gerenciarem usuários, pedidos, finanç
 ## Success Criteria
 
 - [ ] Dashboard com métricas em tempo real
-- [ ] Gestão de usuários com aprovação de drivers
-- [ ] Visualização e gestão de pedidos
+- [ ] Gestêo de usuários com aprovaçêo de drivers
+- [ ] Visualizaçêo e gestêo de pedidos
 - [ ] Controle financeiro e relatórios
 
 ---
@@ -81,7 +81,7 @@ Fornecer painel web para administradores gerenciarem usuários, pedidos, finanç
   - PUT /admin/drivers/:id/reject
 - Presigned URLs para visualizar documentos
 - Audit log table: admin_actions (admin_id, action, target_id, details, created_at)
-- Paginação server-side com cursor
+- Paginaçêo server-side com cursor
 - Filtros: role, status, date_range
 
 **Dependencies:** Story 4.1
@@ -98,11 +98,11 @@ Fornecer painel web para administradores gerenciarem usuários, pedidos, finanç
 **so that** I can resolve issues and ensure quality.
 
 **Acceptance Criteria:**
-1. Lista de pedidos com filtros (status, data, região)
-2. Visualização em mapa de pedidos ativos
+1. Lista de pedidos com filtros (status, data, regiêo)
+2. Visualizaçêo em mapa de pedidos ativos
 3. Detalhes do pedido com timeline completa
 4. Ações: cancelar, reembolsar, reatribuir driver
-5. Comunicação com cliente/driver (chat interno)
+5. Comunicaçêo com cliente/driver (chat interno)
 
 **Technical Notes:**
 - Endpoints:
@@ -134,7 +134,7 @@ Fornecer painel web para administradores gerenciarem usuários, pedidos, finanç
 2. Lista de transações com filtros
 3. Processamento de repasses para drivers
 4. Relatórios exportáveis (CSV, PDF)
-5. Configuração de taxas e comissões por categoria/região
+5. Configuraçêo de taxas e comissões por categoria/regiêo
 
 **Technical Notes:**
 - Endpoints:
@@ -159,6 +159,6 @@ Fornecer painel web para administradores gerenciarem usuários, pedidos, finanç
 
 - [ ] Todas as 4 stories completadas
 - [ ] Admin panel deployado e funcional
-- [ ] Aprovação de drivers funcionando
+- [ ] Aprovaçêo de drivers funcionando
 - [ ] Relatórios financeiros validados
 - [ ] Audit log registrando todas ações

@@ -17,12 +17,12 @@
 
 ## Acceptance Criteria
 
-- [ ] 1. Endpoint GET /orders/history com filtros e paginação
+- [ ] 1. Endpoint GET /orders/history com filtros e paginaçêo
 - [ ] 2. Filtros por status, data, categoria
 - [ ] 3. Endpoint POST /orders/:id/rate para avaliar entrega
 - [ ] 4. Rating de 1-5 estrelas + comentário opcional
 - [ ] 5. Apenas pedidos DELIVERED podem ser avaliados
-- [ ] 6. Atualização automática do rating médio do entregador
+- [ ] 6. Atualizaçêo automática do rating médio do entregador
 - [ ] 7. Endpoint GET /orders/:id/receipt para recibo
 - [ ] 8. Download de recibo em PDF
 
@@ -86,7 +86,7 @@ export class RatingsService {
     }
 
     if (order.clientId !== clientId) {
-      throw new ForbiddenError('Você não pode avaliar este pedido');
+      throw new ForbiddenError('Você nêo pode avaliar este pedido');
     }
 
     if (order.status !== OrderStatus.DELIVERED) {
@@ -98,7 +98,7 @@ export class RatingsService {
     }
 
     if (!order.driverId || !order.driver) {
-      throw new ValidationError('Pedido não possui entregador para avaliar');
+      throw new ValidationError('Pedido nêo possui entregador para avaliar');
     }
 
     // Create rating and update driver average in transaction
@@ -393,7 +393,7 @@ export class ReceiptService {
     }
 
     if (order.clientId !== clientId) {
-      throw new ForbiddenError('Você não tem acesso a este recibo');
+      throw new ForbiddenError('Você nêo tem acesso a este recibo');
     }
 
     if (order.status !== OrderStatus.DELIVERED) {

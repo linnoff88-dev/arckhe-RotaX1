@@ -17,12 +17,12 @@
 
 ## Acceptance Criteria
 
-- [ ] 1. Integração com Mercado Pago API
+- [ ] 1. Integraçêo com Mercado Pago API
 - [ ] 2. Endpoint POST /orders/:id/pay para gerar pagamento Pix
 - [ ] 3. QR Code Pix gerado e retornado
-- [ ] 4. Webhook para confirmação de pagamento
+- [ ] 4. Webhook para confirmaçêo de pagamento
 - [ ] 5. Status do pedido atualizado após pagamento
-- [ ] 6. Expiração de pagamento (30 minutos)
+- [ ] 6. Expiraçêo de pagamento (30 minutos)
 - [ ] 7. Endpoint GET /payments/:id para status
 - [ ] 8. Reembolso automático em caso de cancelamento
 
@@ -198,11 +198,11 @@ export class PaymentsService {
     }
 
     if (order.clientId !== clientId) {
-      throw new ForbiddenError('Você não tem permissão para pagar este pedido');
+      throw new ForbiddenError('Você nêo tem permissêo para pagar este pedido');
     }
 
     if (order.status !== OrderStatus.PENDING_PAYMENT) {
-      throw new ValidationError('Este pedido já foi pago ou não está aguardando pagamento');
+      throw new ValidationError('Este pedido já foi pago ou nêo está aguardando pagamento');
     }
 
     // Check if payment already exists
@@ -267,7 +267,7 @@ export class PaymentsService {
     }
 
     if (payment.order.clientId !== clientId) {
-      throw new ForbiddenError('Você não tem permissão para ver este pagamento');
+      throw new ForbiddenError('Você nêo tem permissêo para ver este pagamento');
     }
 
     return {
@@ -347,7 +347,7 @@ export class PaymentsService {
     });
 
     if (!payment) {
-      throw new NotFoundError('Pagamento pago não encontrado');
+      throw new NotFoundError('Pagamento pago nêo encontrado');
     }
 
     // Refund via Mercado Pago

@@ -59,7 +59,7 @@ export function requireRole(...roles: UserRole[]) {
     await authenticate(request, reply);
 
     if (!request.user || !roles.includes(request.user.role)) {
-      reply.status(403).send({ error: 'Acesso não autorizado' });
+      reply.status(403).send({ error: 'Acesso nêo autorizado' });
     }
   };
 }

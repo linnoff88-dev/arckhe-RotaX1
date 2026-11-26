@@ -17,13 +17,13 @@
 
 ## Acceptance Criteria
 
-- [ ] 1. Deep link para Google Maps com navegação turn-by-turn
-- [ ] 2. Endpoint POST /orders/:id/start-pickup para iniciar navegação à coleta
+- [ ] 1. Deep link para Google Maps com navegaçêo turn-by-turn
+- [ ] 2. Endpoint POST /orders/:id/start-pickup para iniciar navegaçêo à coleta
 - [ ] 3. Endpoint POST /orders/:id/confirm-pickup com foto obrigatória
-- [ ] 4. Endpoint POST /orders/:id/start-delivery para iniciar navegação à entrega
+- [ ] 4. Endpoint POST /orders/:id/start-delivery para iniciar navegaçêo à entrega
 - [ ] 5. Endpoint POST /orders/:id/confirm-delivery com foto + assinatura opcional
-- [ ] 6. Upload de fotos de comprovação para R2/S3
-- [ ] 7. Atualização automática de status em cada etapa
+- [ ] 6. Upload de fotos de comprovaçêo para R2/S3
+- [ ] 7. Atualizaçêo automática de status em cada etapa
 - [ ] 8. WebSocket emit para cliente a cada mudança de status
 
 ---
@@ -113,7 +113,7 @@ export class DeliveryService {
     const order = await this.getDriverOrder(orderId, driverId);
 
     if (order.status !== OrderStatus.COLLECTING) {
-      throw new ValidationError('Pedido não está no status correto para iniciar coleta');
+      throw new ValidationError('Pedido nêo está no status correto para iniciar coleta');
     }
 
     // Log start time
@@ -135,13 +135,13 @@ export class DeliveryService {
     const order = await this.getDriverOrder(orderId, driverId);
 
     if (order.status !== OrderStatus.COLLECTING) {
-      throw new ValidationError('Pedido não está no status correto para confirmar coleta');
+      throw new ValidationError('Pedido nêo está no status correto para confirmar coleta');
     }
 
     // Verify photo exists
     const photoExists = await storageService.fileExists(data.photoKey);
     if (!photoExists) {
-      throw new ValidationError('Foto de coleta não encontrada. Faça o upload novamente');
+      throw new ValidationError('Foto de coleta nêo encontrada. Faça o upload novamente');
     }
 
     // Update order status
@@ -194,7 +194,7 @@ export class DeliveryService {
     const order = await this.getDriverOrder(orderId, driverId);
 
     if (order.status !== OrderStatus.DELIVERING) {
-      throw new ValidationError('Pedido não está no status correto para iniciar entrega');
+      throw new ValidationError('Pedido nêo está no status correto para iniciar entrega');
     }
 
     // Log start time
@@ -216,20 +216,20 @@ export class DeliveryService {
     const order = await this.getDriverOrder(orderId, driverId);
 
     if (order.status !== OrderStatus.DELIVERING) {
-      throw new ValidationError('Pedido não está no status correto para confirmar entrega');
+      throw new ValidationError('Pedido nêo está no status correto para confirmar entrega');
     }
 
     // Verify photo exists
     const photoExists = await storageService.fileExists(data.photoKey);
     if (!photoExists) {
-      throw new ValidationError('Foto de entrega não encontrada. Faça o upload novamente');
+      throw new ValidationError('Foto de entrega nêo encontrada. Faça o upload novamente');
     }
 
     // Verify signature if provided
     if (data.signatureKey) {
       const signatureExists = await storageService.fileExists(data.signatureKey);
       if (!signatureExists) {
-        throw new ValidationError('Assinatura não encontrada');
+        throw new ValidationError('Assinatura nêo encontrada');
       }
     }
 
@@ -378,7 +378,7 @@ export class DeliveryService {
     });
 
     if (!order) {
-      throw new NotFoundError('Pedido não encontrado ou não pertence a você');
+      throw new NotFoundError('Pedido nêo encontrado ou nêo pertence a você');
     }
 
     return order;

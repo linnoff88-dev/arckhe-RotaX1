@@ -18,7 +18,7 @@
 ## Acceptance Criteria
 
 - [ ] 1. Lista de usuários com busca e filtros
-- [ ] 2. Paginação server-side com cursor
+- [ ] 2. Paginaçêo server-side com cursor
 - [ ] 3. Detalhes do usuário com histórico
 - [ ] 4. Aprovar/rejeitar drivers (visualizar documentos)
 - [ ] 5. Bloquear/desbloquear usuários

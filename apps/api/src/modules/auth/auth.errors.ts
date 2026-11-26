@@ -29,7 +29,7 @@ export class InvalidTokenError extends AuthError {
 
 export class UserNotActiveError extends AuthError {
   constructor() {
-    super('Usuário não está ativo. Aguarde aprovação.', 403);
+    super('Usuário nêo está ativo. Aguarde aprovaçêo.', 403);
     this.code = 'USER_NOT_ACTIVE';
   }
 }

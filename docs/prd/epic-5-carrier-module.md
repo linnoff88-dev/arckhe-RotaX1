@@ -16,9 +16,9 @@ Expandir a plataforma para incluir transportadoras que podem atender pedidos de 
 ## Success Criteria
 
 - [ ] Transportadoras podem se cadastrar
-- [ ] Gestão de frota funcional
+- [ ] Gestêo de frota funcional
 - [ ] Pedidos grandes direcionados para transportadoras
-- [ ] Integração com fluxo existente
+- [ ] Integraçêo com fluxo existente
 
 ---
 
@@ -35,9 +35,9 @@ Expandir a plataforma para incluir transportadoras que podem atender pedidos de 
 
 **Acceptance Criteria:**
 1. Cadastro de empresa com CNPJ
-2. Upload de documentação (contrato social, alvará)
-3. Definição de áreas de atuação
-4. Aprovação por admin
+2. Upload de documentaçêo (contrato social, alvará)
+3. Definiçêo de áreas de atuaçêo
+4. Aprovaçêo por admin
 
 **Technical Notes:**
 - Model: Carrier (id, user_id, company_name, cnpj, documents[], regions[], status)
@@ -86,7 +86,7 @@ Expandir a plataforma para incluir transportadoras que podem atender pedidos de 
 **Acceptance Criteria:**
 1. Recebimento de pedidos acima de X kg ou volume
 2. Aceite/recusa com proposta de preço
-3. Atribuição interna para motorista/veículo
+3. Atribuiçêo interna para motorista/veículo
 4. Tracking unificado na plataforma
 
 **Technical Notes:**
@@ -111,7 +111,7 @@ Expandir a plataforma para incluir transportadoras que podem atender pedidos de 
 
 ## Notes
 
-Este épico é **Phase 2** e deve ser implementado apenas após validação do MVP com entregadores autônomos. A decisão de iniciar este épico depende de:
+Este épico é **Phase 2** e deve ser implementado apenas após validaçêo do MVP com entregadores autônomos. A decisêo de iniciar este épico depende de:
 
 1. Demanda validada por entregas de maior volume
 2. Parcerias com transportadoras locais confirmadas

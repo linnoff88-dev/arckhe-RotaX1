@@ -265,14 +265,14 @@ Called automatically when order meets carrier criteria.
 #### Carrier Dashboard Endpoints
 
 ```
-GET    /carrier/orders/available           # Pedidos disponíveis na região
+GET    /carrier/orders/available           # Pedidos disponíveis na regiêo
 GET    /carrier/orders                     # Meus pedidos (aceitos/em andamento)
 GET    /carrier/orders/:id                 # Detalhes do pedido
 POST   /carrier/orders/:id/accept          # Aceitar com preço plataforma
 POST   /carrier/orders/:id/bid             # Propor preço diferente
 POST   /carrier/orders/:id/reject          # Rejeitar pedido
 POST   /carrier/orders/:id/assign          # Atribuir motorista/veículo
-POST   /carrier/orders/:id/unassign        # Remover atribuição
+POST   /carrier/orders/:id/unassign        # Remover atribuiçêo
 ```
 
 #### Carrier Driver Endpoints
@@ -283,7 +283,7 @@ GET    /carrier-driver/orders/:id          # Detalhes do pedido
 POST   /carrier-driver/orders/:id/pickup   # Confirmar coleta
 POST   /carrier-driver/orders/:id/status   # Atualizar status
 POST   /carrier-driver/orders/:id/deliver  # Confirmar entrega
-POST   /carrier-driver/orders/:id/location # Atualizar localização
+POST   /carrier-driver/orders/:id/location # Atualizar localizaçêo
 ```
 
 #### Client Endpoints (Bid Response)
@@ -620,7 +620,7 @@ export const carrierOrderService = {
         userId: carrier.userId,
         type: 'CARRIER_NEW_ORDER',
         title: 'Novo pedido disponível',
-        body: `Entrega de ${order.weightKg}kg disponível na sua região`,
+        body: `Entrega de ${order.weightKg}kg disponível na sua regiêo`,
         data: { carrierOrderId: carrierOrder.id },
       });
 

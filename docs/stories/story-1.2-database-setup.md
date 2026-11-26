@@ -21,7 +21,7 @@
 - [ ] 2. Prisma schema com models: User, Client, Driver, Order, Payment, Rating, Address
 - [ ] 3. Migrations iniciais criadas e aplicadas
 - [ ] 4. Seed script com dados de teste
-- [ ] 5. Conexão testada e documentada
+- [ ] 5. Conexêo testada e documentada
 
 ---
 

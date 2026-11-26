@@ -19,11 +19,11 @@
 
 - [ ] 1. Endpoint POST /clients/profile para completar perfil
 - [ ] 2. Upload de foto de perfil funcional
-- [ ] 3. Validação de CPF/CNPJ
+- [ ] 3. Validaçêo de CPF/CNPJ
 - [ ] 4. CRUD de endereços (múltiplos por cliente)
 - [ ] 5. Endpoint GET /clients/me com dados completos
-- [ ] 6. Endpoint PATCH /clients/me para atualização
-- [ ] 7. Geocodificação automática de endereços (Google Maps)
+- [ ] 6. Endpoint PATCH /clients/me para atualizaçêo
+- [ ] 7. Geocodificaçêo automática de endereços (Google Maps)
 - [ ] 8. Testes unitários (>70% coverage)
 
 ---
@@ -183,7 +183,7 @@ export class AddressesService {
     const coords = await geocodeAddress(fullAddress);
 
     if (!coords) {
-      throw new ValidationError('Não foi possível localizar o endereço');
+      throw new ValidationError('Nêo foi possível localizar o endereço');
     }
 
     // If setting as default, unset other defaults

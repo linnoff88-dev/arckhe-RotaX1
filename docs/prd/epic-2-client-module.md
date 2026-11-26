@@ -6,7 +6,7 @@
 
 ## Goal
 
-Implementar o fluxo completo do cliente desde criação de pedido até rastreamento, incluindo cálculo de preço, pagamento e notificações.
+Implementar o fluxo completo do cliente desde criaçêo de pedido até rastreamento, incluindo cálculo de preço, pagamento e notificações.
 
 ## Dependencies
 
@@ -35,10 +35,10 @@ Implementar o fluxo completo do cliente desde criação de pedido até rastreame
 
 **Acceptance Criteria:**
 1. Endpoints CRUD para perfil do cliente
-2. Gestão de endereços salvos (múltiplos)
-3. Validação de CEP e geocoding
+2. Gestêo de endereços salvos (múltiplos)
+3. Validaçêo de CEP e geocoding
 4. Upload de foto de perfil (S3)
-5. Testes de integração
+5. Testes de integraçêo
 
 **Technical Notes:**
 - Endpoints: GET/PUT /clients/me, CRUD /clients/addresses
@@ -61,7 +61,7 @@ Implementar o fluxo completo do cliente desde criação de pedido até rastreame
 **so that** I can request a delivery service.
 
 **Acceptance Criteria:**
-1. Endpoint POST /orders com validação completa
+1. Endpoint POST /orders com validaçêo completa
 2. Campos: pickup_address, delivery_address, description, category, urgency
 3. Cálculo automático de distância (Google Maps Distance Matrix)
 4. Cálculo de preço baseado em distância + categoria + urgência
@@ -75,8 +75,8 @@ Implementar o fluxo completo do cliente desde criação de pedido até rastreame
   - Veterinário: +10%
   - Congelados: +20%
 - Google Maps Distance Matrix API
-- Zod schema para validação
-- Transação de banco para criar order + payment
+- Zod schema para validaçêo
+- Transaçêo de banco para criar order + payment
 
 **Dependencies:** Story 2.1
 
@@ -92,10 +92,10 @@ Implementar o fluxo completo do cliente desde criação de pedido até rastreame
 **so that** the delivery can be dispatched.
 
 **Acceptance Criteria:**
-1. Integração com Mercado Pago API
-2. Geração de QR Code Pix
-3. Webhook para confirmação de pagamento
-4. Atualização de status: PENDING_PAYMENT → SEARCHING_DRIVER
+1. Integraçêo com Mercado Pago API
+2. Geraçêo de QR Code Pix
+3. Webhook para confirmaçêo de pagamento
+4. Atualizaçêo de status: PENDING_PAYMENT → SEARCHING_DRIVER
 5. Timeout de pagamento (30 min)
 6. Testes com sandbox do Mercado Pago
 
@@ -104,7 +104,7 @@ Implementar o fluxo completo do cliente desde criação de pedido até rastreame
 - Endpoint: POST /payments/pix
 - Webhook: POST /webhooks/mercadopago
 - BullMQ job para timeout de pagamento
-- Idempotency key para evitar duplicação
+- Idempotency key para evitar duplicaçêo
 - Credenciais sandbox em .env
 
 **Dependencies:** Story 2.2
@@ -121,15 +121,15 @@ Implementar o fluxo completo do cliente desde criação de pedido até rastreame
 **so that** I know exactly where my order is.
 
 **Acceptance Criteria:**
-1. WebSocket connection para updates de localização
+1. WebSocket connection para updates de localizaçêo
 2. Endpoint GET /orders/:id/tracking
-3. Atualização de posição a cada 10 segundos
+3. Atualizaçêo de posiçêo a cada 10 segundos
 4. Estados visuais: searching, driver_assigned, collecting, delivering, delivered
 5. ETA dinâmico baseado em tráfego
 
 **Technical Notes:**
 - Socket.IO com namespace /tracking
-- Redis Pub/Sub para broadcast de localização
+- Redis Pub/Sub para broadcast de localizaçêo
 - Room por order_id
 - Client se inscreve em: `tracking:${orderId}`
 - Driver publica em: `driver:${driverId}:location`
@@ -149,14 +149,14 @@ Implementar o fluxo completo do cliente desde criação de pedido até rastreame
 **so that** I can track my deliveries and provide feedback.
 
 **Acceptance Criteria:**
-1. Endpoint GET /orders com paginação e filtros
+1. Endpoint GET /orders com paginaçêo e filtros
 2. Detalhes do pedido com timeline de status
 3. Endpoint POST /orders/:id/rating (1-5 estrelas + comentário)
-4. Média de avaliação atualizada no perfil do driver
-5. Notificação push ao driver sobre nova avaliação
+4. Média de avaliaçêo atualizada no perfil do driver
+5. Notificaçêo push ao driver sobre nova avaliaçêo
 
 **Technical Notes:**
-- Paginação cursor-based (created_at)
+- Paginaçêo cursor-based (created_at)
 - Filtros: status, date_range, category
 - Trigger no banco para atualizar rating_avg
 - FCM para push notification
@@ -170,6 +170,6 @@ Implementar o fluxo completo do cliente desde criação de pedido até rastreame
 
 - [ ] Todas as 5 stories completadas
 - [ ] Fluxo completo testado end-to-end
-- [ ] Integração Mercado Pago validada em sandbox
+- [ ] Integraçêo Mercado Pago validada em sandbox
 - [ ] WebSocket tracking funcionando
 - [ ] Deploy em staging com dados de teste
